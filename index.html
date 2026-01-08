@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>To‑Do List с фильтрами и категориями</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body class="light-theme">
+    <div class="container">
+      <header>
+        <h1>Мой список дел</h1>
+        <button id="themeToggle" title="Сменить тему">🌙</button>
+      </header>
+
+      <div class="controls">
+        <input type="text" id="taskInput" placeholder="Что нужно сделать?" />
+        <div class="categoryWrapper">
+          <select id="categorySelect" class="categorySelect">
+            <option value="">Без категории</option>
+            <option value="work">Работа</option>
+            <option value="study">Учёба</option>
+            <option value="home">Дом</option>
+            <option value="personal">Личное</option>
+          </select>
+        </div>
+        <button id="addTaskBtn">Добавить</button>
+      </div>
+
+      <div class="filters">
+        <input type="text" id="searchInput" placeholder="Поиск..." />
+
+        <div class="view-filters">
+          <button class="filter-btn active" data-filter="all">Все</button>
+          <button class="filter-btn" data-filter="active">Активные</button>
+          <button class="filter-btn" data-filter="completed">Выполненные</button>
+        </div>
+
+        <div class="category-filters">
+          <button class="cat-btn active" data-cat="">Все</button>
+          <button class="cat-btn" data-cat="work">Работа</button>
+          <button class="cat-btn" data-cat="study">Учёба</button>
+          <button class="cat-btn" data-cat="home">Дом</button>
+          <button class="cat-btn" data-cat="personal">Личное</button>
+        </div>
+      </div>
+
+      <ul id="taskList"></ul>
+
+      <div class="actions">
+        <button id="clearAllBtn" class="danger">Очистить всё</button>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
